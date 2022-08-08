@@ -1,13 +1,14 @@
 package com.sparta.an;
 
-/**
- * Hello world!
- *
- */
-public class App 
+import com.sparta.an.random.RandomArray;
+
+import java.util.Arrays;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        int[] randArray = RandomArray.randomArray(100);
+        System.out.println(Arrays.toString(randArray));
     }
 }
