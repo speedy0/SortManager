@@ -1,4 +1,4 @@
-package com.sparta.an.print;
+package com.sparta.an.display.print;
 
 public class TimerPrint {
     public static void printTimer(double start, double end){

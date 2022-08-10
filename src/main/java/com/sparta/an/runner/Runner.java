@@ -1,7 +1,7 @@
 package com.sparta.an.runner;
 
-import com.sparta.an.print.PrintingResults;
-import com.sparta.an.print.TimerPrint;
+import com.sparta.an.display.print.PrintingResults;
+import com.sparta.an.display.print.TimerPrint;
 import com.sparta.an.sortingAlgorithms.Sorter;
 
 public class Runner {

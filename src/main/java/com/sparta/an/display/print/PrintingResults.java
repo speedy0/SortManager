@@ -1,4 +1,4 @@
-package com.sparta.an.print;
+package com.sparta.an.display.print;
 
 import java.util.Arrays;
 
