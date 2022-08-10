@@ -1,9 +1,9 @@
 package com.sparta.an;
 
+import com.sparta.an.print.PrintingResults;
+import com.sparta.an.print.TimerPrint;
 import com.sparta.an.random.RandomArray;
 import com.sparta.an.sortingAlgorithms.BubbleSort;
-
-import java.util.Arrays;
 
 public class App
 {
@@ -13,10 +13,10 @@ public class App
         BubbleSort bubble = new BubbleSort();
 
         int[] randArray = RandomArray.randomArray(100);
-        System.out.println("Array before bubbleSort: " + Arrays.toString(randArray));
+        PrintingResults.printStartArray(randArray);
         double start = System.nanoTime();
-        System.out.println("Array after bubbleSort: " + Arrays.toString(bubble.sort(randArray)));
+        PrintingResults.printEndArray(bubble.sort(randArray));
         double end = System.nanoTime();
-        System.out.println("Time taken for BubbleSort: " + ((end-start) / 10000));
+        TimerPrint.printTimer(start, end);
     }
 }
