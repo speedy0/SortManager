@@ -1,22 +1,19 @@
 package com.sparta.an;
 
-import com.sparta.an.print.PrintingResults;
-import com.sparta.an.print.TimerPrint;
+import com.sparta.an.loader.Loader;
 import com.sparta.an.random.RandomArray;
 import com.sparta.an.sortingAlgorithms.BubbleSort;
+import com.sparta.an.sortingAlgorithms.Sorter;
+
+import java.util.Arrays;
 
 public class App
 {
     public static void main( String[] args )
     {
-        //Creation of an object - to be deleted.
-        BubbleSort bubble = new BubbleSort();
-
-        int[] randArray = RandomArray.randomArray(100);
-        PrintingResults.printStartArray(randArray);
-        double start = System.nanoTime();
-        PrintingResults.printEndArray(bubble.sort(randArray));
-        double end = System.nanoTime();
-        TimerPrint.printTimer(start, end);
+        int[] array = RandomArray.randomArray(50);
+        Sorter[] sortArrays = {new BubbleSort(), new BubbleSort()};
+        Loader.sortLoader(sortArrays, array);
+        System.out.println(Arrays.toString(array));
     }
 }
