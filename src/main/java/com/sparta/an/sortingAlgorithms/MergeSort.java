@@ -9,15 +9,7 @@ public class MergeSort implements Sorter{
         int[] array2 = new int[array1.length];
 
         // Splits passed in array equally to two different arrays.
-        int arr2Index = 0;
-        for (int i = 0; i <= array.length - 1; i++){
-            if (i <= (array.length - 1) / 2){
-                array1[i] = array[i];
-            } else {
-                array2[arr2Index] = array[i];
-                arr2Index++;
-            }
-        }
+        splitToArrays(array, array1, array2);
 
         // Sorting using Java algorithm to obtain two sorted methods.
         Arrays.sort(array1);
@@ -30,6 +22,18 @@ public class MergeSort implements Sorter{
 
         mergeArray(array1, array2, array.length, sortedArray, currArr1Ind, currArr2Ind);
         return sortedArray;
+    }
+
+    private static void splitToArrays(int[] array, int[] array1, int[] array2) {
+        int arr2Index = 0;
+        for (int i = 0; i <= array.length - 1; i++){
+            if (i <= (array.length - 1) / 2){
+                array1[i] = array[i];
+            } else {
+                array2[arr2Index] = array[i];
+                arr2Index++;
+            }
+        }
     }
 
     private static void mergeArray(int[] array1, int[] array2, int arrayLengths, int[] sortedArray, int currArr1Ind, int currArr2Ind) {

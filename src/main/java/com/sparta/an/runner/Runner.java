@@ -10,6 +10,6 @@ public class Runner {
         double start = System.nanoTime();
         PrintingResults.printEndArray(sorter.sort(array));
         double end = System.nanoTime();
-        TimerPrint.printTimer(start, end);
+        TimerPrint.printTimer(sorter, start, end);
     }
 }
