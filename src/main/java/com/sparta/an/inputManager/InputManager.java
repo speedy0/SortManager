@@ -1,4 +1,4 @@
-package com.sparta.an;
+package com.sparta.an.inputManager;
 
 import com.sparta.an.display.scanner.InputScanner;
 

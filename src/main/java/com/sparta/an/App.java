@@ -1,5 +1,6 @@
 package com.sparta.an;
 
+import com.sparta.an.inputManager.InputManager;
 import com.sparta.an.loader.Loader;
 import com.sparta.an.random.RandomArray;
 

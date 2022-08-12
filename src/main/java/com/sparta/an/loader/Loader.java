@@ -2,6 +2,7 @@ package com.sparta.an.loader;
 
 import com.sparta.an.runner.Runner;
 import com.sparta.an.sortingAlgorithms.*;
+import com.sparta.an.sortingAlgorithms.binaryTree.BinaryTree;
 
 public class Loader {
     public static void sortLoaders(String[] sorterOptions, int[] array){
@@ -12,7 +13,7 @@ public class Loader {
                 case "BubbleSort" -> sorters[i] = new BubbleSort();
                 case "MergeSort" -> sorters[i] = new MergeSort();
                 case "InsertionSort" -> sorters[i] = new InsertionSort();
-                case "BinaryTree" -> sorters[i] = new BinaryTree();
+                case "BinaryTree" -> sorters[i] = new BinaryTree(array.length);
                 case "QuickSort" -> sorters[i] = new QuickSort();
                 default -> sorters[i] = null; // For an error
             }
