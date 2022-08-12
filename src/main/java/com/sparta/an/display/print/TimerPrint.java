@@ -4,6 +4,7 @@ import com.sparta.an.sortingAlgorithms.Sorter;
 
 public class TimerPrint {
     public static void printTimer(Sorter sorter, double start, double end){
-        System.out.println("Time taken for " + sorter +": " + ((end - start) / 1000000));
+        String className = sorter.getClass().toString().replace("com.sparta.an.sortingAlgorithms.", "");
+        System.out.println("Time taken for " + className +": " + ((end - start) / 1000000));
     }
 }

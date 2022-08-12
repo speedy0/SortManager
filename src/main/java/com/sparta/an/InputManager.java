@@ -1,7 +1,6 @@
 package com.sparta.an;
 
 import com.sparta.an.display.scanner.InputScanner;
-import com.sparta.an.sortingAlgorithms.MergeSort;
 
 public class InputManager {
     public static String[] getUserChoice(String[] userChoices){
