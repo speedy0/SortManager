@@ -36,8 +36,6 @@ public class BubbleSortTest {
     void whenPassedAnArrayReturnsCorrectLengthOfTheArrayBack(){
         int[] randNumbers = {3, -5, -5, 9, 11, 17, 404, 50, 58, 36, 17, 52, 0};
         int[] expected = {-5, -5, 3, 0, 9, 11, 17, 17, 36, 50, 52, 58, 404};
-    Assertions.assertEquals(expected.length,new BubbleSort().sort(randNumbers).length);
+        Assertions.assertEquals(expected.length,new BubbleSort().sort(randNumbers).length);
     }
-
-
 }
