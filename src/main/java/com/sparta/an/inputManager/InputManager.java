@@ -14,11 +14,9 @@ public class InputManager {
             } case (3) -> {
                 return new String[]{"BinaryTree"};
             } case (4) -> {
-                return new String[]{"QuickSort"};
-            } case (5) -> {
                 return new String[]{"InsertionSort"};
             } default -> {
-                return new String[]{"BubbleSort", "MergeSort", "InsertionSort", "BinaryTree", "QuickSort"};
+                return new String[]{"BubbleSort", "MergeSort", "InsertionSort", "BinaryTree"};
             }
         }
     }

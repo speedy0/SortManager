@@ -14,7 +14,6 @@ public class Loader {
                 case "MergeSort" -> sorters[i] = new MergeSort();
                 case "InsertionSort" -> sorters[i] = new InsertionSort();
                 case "BinaryTree" -> sorters[i] = new BinaryTree(array.length);
-                case "QuickSort" -> sorters[i] = new QuickSort();
                 default -> sorters[i] = null; // For an error
             }
         }

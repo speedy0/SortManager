@@ -117,7 +117,6 @@ public class BinaryTree implements Sorter, BinaryTreeImpl{
     public void addElements(int[] elements) {
         for (int element : elements){
             addElementToTree(element);
-            System.out.println(element + " added to the tree.");
         }
     }
 
