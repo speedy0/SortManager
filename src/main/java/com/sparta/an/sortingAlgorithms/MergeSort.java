@@ -1,5 +1,7 @@
 package com.sparta.an.sortingAlgorithms;
 
+import com.sparta.an.logger.LoggerSystem;
+
 import java.util.Arrays;
 
 public class MergeSort implements Sorter{
@@ -7,6 +9,11 @@ public class MergeSort implements Sorter{
     public int[] sort(int[] array) {
         int[] array1 = new int[array.length / 2];
         int[] array2 = new int[array1.length];
+
+        LoggerSystem.getMessage(1, "Starting Merge Sort sorting: " + Arrays.toString(array));
+        if (array1.length != array2.length){
+            LoggerSystem.getMessage(5, "Array 1 and 2 in Merge sort are not equal.");
+        }
 
         // Splits passed in array equally to two different arrays.
         splitToArrays(array, array1, array2);
@@ -21,6 +28,10 @@ public class MergeSort implements Sorter{
         int currArr2Ind = 0;
 
         mergeArray(array1, array2, array.length, sortedArray, currArr1Ind, currArr2Ind);
+
+        if (sortedArray == null){
+            LoggerSystem.getMessage(5, "Array returned in Merge Sort is null.");
+        }
         return sortedArray;
     }
 

@@ -8,17 +8,38 @@ public class LoggerSystem {
 
     private static void setLogger(Level level, String message){
         //ConsoleHandler consoleHandler = new ConsoleHandler();
-        //consoleHandler.setLevel(Level.ALL);
+        //consoleHandler.setLevel(Level.OFF);
         logger.setLevel(Level.ALL);
+        logger.setUseParentHandlers(false);
 
-        try {
-            FileHandler fileHandler = new FileHandler("src/main/resources/mylog.log", true);
-            fileHandler.setLevel(Level.ALL);
-            fileHandler.setFormatter(new SimpleFormatter());
-            logger.addHandler(fileHandler);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        if (level == Level.WARNING || level == Level.SEVERE){
+            try {
+                FileHandler fileHandler = new FileHandler("src/main/resources/issues/issues.log", true);
+                fileHandler.setLevel(Level.ALL);
+                fileHandler.setFormatter(new SimpleFormatter());
+                logger.addHandler(fileHandler);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        } else if (level == Level.INFO){
+            try {
+                FileHandler fileHandler = new FileHandler("src/main/resources/confirmations/confirmations.log", true);
+                fileHandler.setLevel(Level.ALL);
+                fileHandler.setFormatter(new SimpleFormatter());
+                logger.addHandler(fileHandler);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        } /*else {
+            try {
+                FileHandler fileHandler = new FileHandler("src/main/resources/processes/process.log", false);
+                fileHandler.setLevel(Level.ALL);
+                fileHandler.setFormatter(new SimpleFormatter());
+                logger.addHandler(fileHandler);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }*/
 
         SaveLogs(logger, level, message);
     }

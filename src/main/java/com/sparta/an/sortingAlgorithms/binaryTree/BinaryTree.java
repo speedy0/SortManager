@@ -1,12 +1,22 @@
 package com.sparta.an.sortingAlgorithms.binaryTree;
 
+import com.sparta.an.logger.LoggerSystem;
 import com.sparta.an.sortingAlgorithms.Sorter;
+
+import java.util.Arrays;
 
 public class BinaryTree implements Sorter, BinaryTreeImpl{
     @Override
     public int[] sort(int[] array) {
+        LoggerSystem.getMessage(1, "Starting Binary Tree adding sorting: " + Arrays.toString(array));
         addElements(array);
+        LoggerSystem.getMessage(4, "Binary Tree Sort has added values to the tree, there are currently " + getNumberOfElements() + "values.");
+
         getSortedTreeAsc(array);
+        LoggerSystem.getMessage(4, "Binary Tree Sort has finished and returned: " + Arrays.toString(array));
+        if (array == null){
+            LoggerSystem.getMessage(5, "Array returned in Binary Tree Sort is null.");
+        }
         return array;
     }
 

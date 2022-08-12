@@ -6,7 +6,7 @@ import com.sparta.an.random.RandomArray;
 
 public class App
 {
-    public static void main( String[] args )
+    public static void main(String[] args )
     {
         // Sorting choices - to be passed to Input for decision-making
         String[] sortingChoices = {"Bubble Sort", "Merge Sort", "Binary Tree", "Insertion Sorter"};

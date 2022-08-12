@@ -1,5 +1,7 @@
 package com.sparta.an.random;
 
+import com.sparta.an.logger.LoggerSystem;
+
 import java.util.Random;
 
 public final class RandomArray
@@ -12,6 +14,11 @@ public final class RandomArray
             randArray[i] = rand.nextInt(1000);
         }
 
+        LoggerSystem.getMessage(4, "Produced a random array with length of " + randArray.length);
+
+        if (randArray.length == 0){
+            LoggerSystem.getMessage(5, "Random array has returned empty.");
+        }
         return randArray;
     }
 }
